@@ -2,7 +2,7 @@
 
 * [Enteropathway](https://enteropathway.org) is a manually curated human gut specific database for metabolic pathways. 
 
-* A user account is needed to access Enteropathway by REST API.
+* Registration of a user account is needed to access Enteropathway by REST API.
 
 * This tutorial is based on the [Enteropathway REST API](https://enteropathway.org/#/api).
 
@@ -12,9 +12,15 @@
 ## How to use
 ### Authorization token
 
+* The `username` and `password` can be obtained by registration of a user account on the [registration page](https://enteropathway.org/#/register).
+
 * `user_name` and `pass_word` should be changed to their own username and password respectively.
 
 * Obtained `TOKEN` can be confirmed by `echo $TOKEN`.
+
+* `TOKEN` will be expired in <strong>one day</strong>.
+
+  * If `TOKEN` will be expired, Try to get `TOKEN` again.
 
 ```bash
 TOKEN=`curl -X POST -H "Accept: application/json" \
